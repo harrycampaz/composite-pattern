@@ -14,10 +14,19 @@ public class Builder {
     }
 
     Component layout2(){
-        Component c = new Composite("Layout1");
+        Component c = new Composite("Layout2");
 
-        c.add(imageView);
-        c.add(textView);
+        c.add(buttonView);
+        c.add(layout1());
+
+        return c;
+    }
+
+    Component layout3(){
+        Component c = new Composite("Layout3");
+
+        c.add(layout1());
+        c.add(layout2());
 
         return c;
     }
